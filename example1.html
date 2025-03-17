@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <p>
+      고객명 : 
+      <input type="text">
+    </p>
+    <p>
+      전화번호 : <input type="number">
+    </p>
+    <p>
+      E-mail : <input type="email">
+    </p>
+    <p>피자선택 :
+      <select>
+          <option>피자를 선택하세요</option>
+          <option>치즈 퐁듀 파이어 미트</option>
+          <option>블록버스터4</option>
+          <option>글로벌 레전드4</option>
+          <option>블랙앵거스 스테이크</option>
+          <option>베스트 콰트로</option>
+          <option>블랙타이거 슈림프</option>
+      </select>
+    </p>
+    <!-- fieldset 과 legend를 사용해서 테두리 만들기! -->
+    <fieldset>
+      <legend>피자사이즈</legend>
+      <input type="radio" name="size" value="S">Small<br><br>
+      <input type="radio" name="size" value="M">Medium<br><br>
+      <input type="radio" name="size" value="L">Large<br><br>
+    </fieldset>
+    <!-- radio타입 사용할 때는 name값을 동일하게하여 중복선택이 안되게 한다. -->
+
+    <fieldset>
+      <legend>토핑 선택</legend>
+      <input type="checkbox" name="topping">베이컨<br><br>
+      <input type="checkbox" name="topping">치즈<br><br>
+      <input type="checkbox" name="topping">양파<br><br>
+      <input type="checkbox" name="topping">버섯<br><br>
+    </fieldset>
+    
+    <p>
+      희망배송시간 : 
+      <input type="time">
+      <!-- 시간선택 박스는 time -->
+    </p>
+    <p>
+      배송시 요청사항 : 
+      <textarea rows="3"></textarea>
+      <!-- 크기 조절이 가능한 텍스트상자는 textarea로 묶기! -->
+    </p>
+    <button>주문하기</button>
+
+    <!--<form method="post">
+      <label for="name">고객명 : </label>
+      <input type="text" name="name" id="name">
+      <br><br>
+      
+      <label for="phone">전화번호 : </label>
+      <input type="tel" name="phone" id="phone">
+      <br><br>
+      
+      <label for="email">E-mail : </label>
+      <input type="email" name="email" id="email">
+      <br><br>
+      
+      <label for="pizza">피자선택 : </label>
+      <select name="pizza" id="pizza">
+          <option value="default">피자를 선택하세요</option>
+          <option value="1">치즈 퐁듀 파이어 미트</option>
+          <option value="2">블록버스터4</option>
+          <option value="3">글로벌 레전드4</option>
+          <option value="4">블랙앵거스 스테이크</option>
+          <option value="5">베스트 콰트로</option>
+          <option value="6">블랙타이거 슈림프</option>
+      </select><br>
+
+      <fieldset>
+          <legend>피자 사이즈</legend>
+          <input type="radio" name="size" value="S">Small<br><br>
+          <input type="radio" name="size" value="M">Medium<br><br>
+          <input type="radio" name="size" value="L">Large<br><br>
+      </fieldset>
+
+      <fieldset>
+          <legend>토핑 선택</legend>
+          <input type="checkbox" name="topping" value="bacon">베이컨<br><br>
+          <input type="checkbox" name="topping" value="cheese">치즈<br><br>
+          <input type="checkbox" name="topping" value="onion">양파<br><br>
+          <input type="checkbox" name="topping" value="mushroom">버섯<br><br>
+      </fieldset>
+
+      <label for="time">희망배송시간 : </label>
+      <input type="time" name="time" id="time">
+      <br><br>
+      
+      <label for="request">배송시 요청사항 : </label>
+      <textarea name="request" id="request" rows="4" cols="20"></textarea>
+      <br><br>
+
+      <button>주문하기</button>-->
+</body>
+</html>
