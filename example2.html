@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>납품자 정보</legend>
+      <!-- <ol> : 리스트를 숫자로 정리 -->
+      <ol>
+        <li>
+          <label>납품자명 :</label>
+          <input type="text" name="name" />
+        </li>
+        <br />
+        <li>
+          <label>email :</label>
+          <input type="email" name="email" placeholder="answer@naver.com" />
+        </li>
+        <br />
+        <li>
+          <label>홈페이지 :</label>
+          <input type="url" name="homepage" value="http://" />
+        </li>
+        <br />
+        <li>
+          <label>지역 :</label>
+          <select name="region">
+            <option>서울</option>
+            <option>대전</option>
+            <option>대구</option>
+            <option selected>부산</option>
+          </select>
+        </li>
+      </ol>
+    </fieldset>
+
+    <fieldset>
+      <legend>납품 정보</legend>
+      <ul>
+        <li>
+          <label>상품명 :</label>
+          <input type="text" name="product_name" />
+        </li>
+        <br />
+        <li>
+          <label>납품수량 :</label>
+          <input type="number" name="amount" placeholder="최소 100" />
+        </li>
+        <br />
+        <li>
+          <label>납품등급 :</label>
+          <input type="range" name="range" />
+          <!-- 볼륨타입 : range, step:10 -> 10씩 이동 -->
+        </li>
+        <br />
+        <li>
+          <label>기타사항 :</label>
+          <textarea rows="5" cols="20"></textarea>
+        </li>
+      </ul>
+    </fieldset>
+    <br />
+    <input type="button" name="send" value="send message" />
+  </body>
+</html>
