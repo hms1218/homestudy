@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body{
+      #container{
         width: 960px;
+        border: 3px solid #000;
       }
       #image{
         border-bottom: 1px solid black;
       }
-      #search_button{
+      .float_left{
         float : left;
+      }
+      .float_right{
+        float: right;
+      }
+      #search_button{
         border-right: 1px solid black;
         padding: 5px;
         width: 80px;
         height: 400px;
       }
-      #right{
+      #div2{
         padding: 5px;
       }
-      #select_box{
-        text-align: right;
-        margin: 5px;
-      }
+      
       .bookSearch_button{
         padding: 5px 10px;
       }
@@ -33,6 +36,7 @@
         color: #bfbfbf;
         border: 1px solid #bfbfbf;
         padding: 5px 20px;
+        width: 80px;
       }
 
       .viewButton{
@@ -40,6 +44,7 @@
         color: red;
         background: white;
         padding: 5px 20px;
+        width: 80px;
       }
 
       .borrowButton{
@@ -47,13 +52,7 @@
         color: blue;
         background: white;
         padding: 5px 20px;
-      }
-
-      table{
-        border-collapse : collapse;
-        border: 1px solid black;
-        margin : 0px auto;
-        table-layout: fixed;
+        width: 80px;
       }
 
       .bookSearch{
@@ -62,6 +61,12 @@
         margin: 5px;
       }
 
+      table{
+        border-collapse : collapse;
+      }
+      table, tr{
+        border: 1px solid black;
+      }
       td{
         padding: 15px 10px;
       }
@@ -75,10 +80,10 @@
         width:100px;
       }
       tr > td:nth-child(4){
-        width:100px;
+        width:50px;
       }
       tr > td:nth-child(5){
-        width:100px;
+        width:50px;
       }
 
       
@@ -89,13 +94,14 @@
       <div id="image">
         <img src="../logo.png" alt="이미지" width="100px" height="50px"/>
       </div>
-      <div id="search_button">
+      <div id="search_button" class="float_left">
         <input type="button" value="도서검색" class="bookSearch_button">
       </div>
-      <div id="right">
+      <div id="div2" class="float_left">
         <input type="text" size="60" placeholder="도서명 검색" class="bookSearch"/>
         <input type="button" value="검색" class="searchButton">
-          <div id="select_box">
+        
+          <div id="select_box" class="float_right">
             <label>정렬방식</label>
             <select>
               <option selected>선택하세요</option>
@@ -103,7 +109,8 @@
               <option>도서명 내림차순</option>
             </select>
           </div>
-        <table border="1">
+          <!-- <div style="clear:both;"></div> -->
+        <table>
           <tr>
             <td>1</td>
             <td>도서명</td>
@@ -135,5 +142,6 @@
         </table>
       </div>
     </div>
+    <!-- <div style="clear:both;"></div> -->
   </body>
 </html>
