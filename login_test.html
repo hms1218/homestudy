@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container{
+            border: 3px solid black;
+            width: 400px;
+        }
+
+        .image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #id_pw{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #id {
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        #pw{
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        #login{
+            width: 97%;
+            padding: 10px;
+            margin: 20px 5px 10px 5px;
+            background: darkblue;
+            color: white;
+            font-size: 18px;
+        }
+
+        #check{
+            padding: 5px;
+        }
+
+        #option{
+            text-align: center;
+            margin: 5px;
+        }
+
+        .option{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- form method = "GET" 방식 -->
+    <!-- form action = " .html" 목적지 -->
+    <!-- form submit(); 전송 -->
+    <form action = "board.html">
+        <div id="container">
+            <div class="image">
+                <img src="../logo.png" alt="이미지" width=200px height=200px>
+            </div>
+            <div id="id_pw">
+                <input type="text" placeholder="계정" id="id">
+            </div>
+            <div id="id_pw">
+                <input type="password" placeholder="비밀번호" id="pw">
+            </div>
+            <div id="submit">
+                <input type="submit" value="로그인" id="login">
+            </div>
+            <div id="check">
+                <input type="checkbox" checked>자동 로그인
+                <input type="checkbox" checked>비밀번호 저장
+            </div>
+            <div id="option">
+                <i class="fas fa-cog"></i><span class="option">환경설정</span>
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>

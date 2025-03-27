@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            margin-top: 100px;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+
+        table{
+            border-collapse: collapse;
+            margin-left: 38%;
+        }
+        
+        #revise{
+            display:block;
+            text-align: center;
+        }
+        
+        thead{
+            text-align: center;
+            background: darkblue;
+            color: white;
+        }
+
+        td{
+            padding: 10px;
+        }
+
+        .num{
+            width: 80px;
+            padding: 3px;
+        }
+
+        .birth{
+            width: 40px;
+            padding: 3px;
+        }
+
+        textarea{
+            width: 300px;
+            height: 200px;
+        }
+
+        #revise{
+            background: darkblue;
+            color: white;
+            padding: 15px;
+            margin: 20px;
+            margin-left: 48%;
+            font-size: 15px;
+            border-radius: 3px;
+            border-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>개인정보입력 폼</h2>
+        
+        <table border="1">
+            <thead>
+                <tr>
+                    <td colspan="2">개인정보</td>
+                </tr>
+            </thead>
+            <tr>
+                <td>주민등록번호</td>
+                <td><input type="text" class="num"> - <input type="text" class="num"> <button>검증</button></td>
+            </tr>
+            <tr>
+                <td>생일</td>
+                <td><input type="number" class="birth">년 <input type="number" class="birth">월 <input type="number" class="birth">일</td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input type="radio" name="gender">남자
+                    <input type="radio" name="gender">여자
+                </td>
+            </tr>
+            <tr>
+                <td>관심분야</td>
+                <td>
+                    <input type="checkbox">여행
+                    <input type="checkbox">영화
+                    <input type="checkbox">독서
+                    <input type="checkbox">음악
+                    <input type="checkbox">관심없음
+                </td>
+            </tr>
+            <tr>
+                <td>자기소개</td>
+                <td><textarea></textarea></td>
+            </tr>
+        </table>
+        <form action="board.html">
+            <input type="submit" value="수정완료" id="revise">
+        </form>
+    </div>
+</body>
+</html>
