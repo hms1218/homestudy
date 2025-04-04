@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="korea.js"> </script>
+<style>
+    #container{
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .id_title{
+        margin-right: 270px;
+        margin-bottom: 0;
+    }
+    .id{
+        padding: 10px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid gainsboro;
+    }
+
+    .pw_title{
+        margin-right: 250px;
+        margin-bottom: 0;
+    }
+    .pw{
+        padding: 10px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid gainsboro;
+    }
+
+    .name_title{
+        margin-right: 285px;
+        margin-bottom: 0;
+    }
+    .name{
+        padding: 10px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid gainsboro;
+    }
+
+    .email_title{
+        margin-right: 265px;
+        margin-bottom: 0;
+    }
+    .email{
+        padding: 10px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid gainsboro;
+    }
+
+    .button{
+        padding: 15px;
+        width:320px;
+        border-radius: 5px;
+        background: orange;
+        color: white;
+        border-style: none;
+        font-size: 15px;
+    }
+</style>
+<body>
+    <div id="container">
+        <form>
+        <div id="image">
+            <img src="login_logo.jpg" alt="이미지" width="70px" class="image">
+        </div>
+        <h2>PLEASE JOIN US</h2>
+        <div id="id">
+            <h3 class="id_title">아이디</h3>
+            <label><input type="text" placeholder="아이디를 입력해 주세요" class="id"></label>
+            <br>
+            <div class="id_input">소문자/숫자 4자 이상을 입력해 주세요.</div>
+        </div>
+        <div id="pw">
+            <h3 class="pw_title">비밀번호</h3>
+            <label><input type="password" placeholder="비밀번호를 입력해 주세요" class="pw"></label>
+            <div class="pw_input">8~20자의 영문 대/소문자,숫자,특수문자를 사용하세요.</div>
+        </div>
+        <div id="name">
+            <h3 class="name_title">이름</h3>
+            <label><input type="text" placeholder="이름을 입력해 주세요" class="name"></label>
+            <div class="name_input"></div>
+        </div>
+        <div id="email">
+            <h3 class="email_title">이메일</h3>
+            <label><input type="email" placeholder="이메일을 입력해 주세요" class="email"></label>
+            <div class="email_input">이메일을 입력해주세요.</div>
+        </div>
+        <br><br>
+        <div id="buttonBox">
+            <input type="button" value="가입 완료하기" class="button">
+        </div>
+        </form>
+    </div>
+</body>
+</html>
