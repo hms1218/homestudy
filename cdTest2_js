@@ -1,0 +1,27 @@
+// 정수 l과 r이 주어졌을 때, l 이상 r이하의 정수 중에서 숫자 "0"과 "5"로만 이루어진 모든 정수를 오름차순으로 저장한 배열을 return 하는 solution 함수를 완성해 주세요.
+
+// 만약 그러한 정수가 없다면, -1이 담긴 배열을 return 합니다.
+
+function solution(l, r) {
+    var answer = [];
+    
+    for(let i=l; i<=r; i++){
+        let str = i.toString(); // Sting(i)
+        if([...str].every(x => x==='0' || x==='5')){
+            answer.push(i);
+        }
+    }
+    
+    return answer.length == 0 ? [-1] : answer;
+}
+
+// [...str] : 전개연산자
+// 배열이나 객체를 쉽게 확장하거나 복사하는 기능 ( 얕은 복사 )
+
+//every() : 배열 검사
+//조건이 true인 경우만 반환 -> 하나라도 false라면 순환을 멈춤
+//some()
+//조건이 false인 경우 반환 -> 하나라도 true라면 순환을 멈춤
+
+//push()
+//배열의 끝에 하나 이상의 요소를 추가 ( 밀어넣기 )
