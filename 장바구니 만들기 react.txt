@@ -1,0 +1,51 @@
+쇼핑몰 장바구니 기능 구현하기
+사용자가 제품을 장바구니에 담고, 수량을 변경, 삭제할 수 있는 기능이 필요하다.
+전역상태로 관리되는 장바구니 정보는 어느 페이지에서든 접근 가능해야 하며,
+헤더에는 담긴 제품의 개수와 총 금액이 실시간으로 표시되어야 한다.
+
+1. CartContext 생성하기
+- CartProvider 컴포넌트를 구현
+장바구니state : 내부에 장바구니상태 const[items, setItems] = useState([제품]); 
+상태를 갱신하는 메서드 : addItem(추가), removeItem(삭제),updateQuantity(수정), clearCart(비우기)를 가진다.
+
+- 추가를 할 때 객체에 quantity프로퍼티도 추가해야한다.
+
+- 제품
+export const products = [
+  { id: '1', name: 'Laptop', price: 1200000 },
+  { id: '2', name: 'Smartphone', price: 800000 },
+  { id: '3', name: 'Headphones', price: 150000 },
+];
+
+2. index.js에서 최상위 래핑
+- <CartProvider>로 App을 감싼다.
+
+3. 제품목록 페이지
+- 더미데이터로 구성된 제품리스트를 렌더링 한다.
+- 각 제품마다 "장바구니에 담기" 버튼을 두고, 클릭시 addItem을 호출해 장바구니에 추가한다.
+- 동일한 제품을 여러번 담으면 quantity(양)만 늘어나도록 구현한다.
+
+4. 헤더 컴포넌트
+- 상품페이지로 가는 링크 만들기
+- useContext(CartContext)를 사용해 전체 아이템 수(모든 양의 합)과 총 금액(price * quantity)을 계산하여 표시한다.
+ex) 상품 | 10개 - 50000원
+
+5. 장바구니 페이지
+- 장바구니에 모든 CartItem을 목록으로 보여준다.
+- 각 항목마다 수량을 변경할 수 있는 <input type="number"> 필드와 "삭제" 버튼을 제공한다.
+- 수량 변경 시 updateQuantity(id, 새 양) 호출, 삭제 시 removeItem(id)를 호출한다.
+- 장바구니 비우기 버튼을 클릭하면 clearCart() 호출
+
+6. 리액트 라우팅
+- /products, /cart 경로를 설정
+- 헤더의 장바구니 클릭시 /cart로 이동하도록 한다.
+
+<div>
+    <Header />
+    <Routes>
+      <Route path="/" element={<Navigate to="/products" />} />
+      <Route path="/products" element={<ProductList />} />
+      <Route path="/cart" element={<CartPage />} />
+    </Routes>
+<div/>
+
