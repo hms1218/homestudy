@@ -1,0 +1,53 @@
+오버로딩(overloading)
+같은 클래스에서 같은 이름의 메서드를 매개변수의 개수나 타입을 다르게 해서 여러번 정의하는것(중복정의)0
+
+오버라이딩(overriding)
+상속관계에서 부모 클래스에 정의된 메서드를 자식클래스에서 재정의하는 것 메서드명이나 매개변수의 타입,개수는 모두 같고 내용만 자식클래스의 상황에 따라 재정의한다.(재정의)
+
+final 키워드의 역할은 무엇인가
+클래스 : final로 선언된 클래스는 상속이 불가능하다.
+메서드 : final로 선언된 메서드는 오버라이딩 할 수 없다.
+변수 : final로 선언된 변수는 한 번만 값을 할당할 수 있으며 이후 값을 변경할 수 없다.
+
+예외처리란 무엇인가? try-catch-finally 블록을 사용한 예외 처리 동작 원리를 설명하세요
+
+실행 중 발생할 수 있는 오류를 처리하는 방법이다.
+오류가 발생할 수 있는 코드를 try구문에 넣고 오류가 발생하면 catch블록에서 처리한다. 오류 발생 여부와 상관없이 finally블록은 반드시 실행된다.
+
+public class Gisafirst {
+    static void func(String[] m, int n) {
+        for (int i = 1; i < n; i++) {
+            if (m[i - 1].equals(m[i])) {
+                System.out.print("O");
+            } else {
+                System.out.print("N");
+            }
+        }
+        for (String mo : m) {
+            System.out.print(mo);
+        }
+    }
+
+    public static void main(String[] args) {
+        String[] m = new String[] { "A", "A", new String("A") };
+        func(m, m.length);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
