@@ -1,0 +1,5 @@
+컴포넌트 만드는거
+useState,useEffect, fetch(), context api, 라우팅
+style 직접주는거, css파일 import해서 쓰는거
+className={`navigation ${theme}`}
+ㄴ .navigation.dark

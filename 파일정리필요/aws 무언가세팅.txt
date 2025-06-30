@@ -1,0 +1,10 @@
+Route53
+-> 호스팅영역
+-> 레코드 클릭
+-> 레코드편집
+-> 레코드 이름 app
+-> 별칭 on
+-> 로드밸런서에 대한 별칭
+-> front-lb
+
+https://github.com/hms1218/springboot-developer.git

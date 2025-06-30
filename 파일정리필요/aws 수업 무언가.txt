@@ -1,0 +1,13 @@
+3.35.16.211
+
+server{
+    listen 80;
+    server_name api.springboothms.store;
+
+    lacation / {
+        proxy_pass http://localhost:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real_IP $remote_addr;
+    }
+}
+

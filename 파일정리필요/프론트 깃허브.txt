@@ -1,0 +1,19 @@
+1. 프론트엔드 프로젝트를 레포지토리에 업로드
+2. .github/workflows/deploy.yml 만들기
+3. name : React App Deploy to EB (똑같이안해도됨)
+4. main 브랜치에 push될 때 실행
+jobs
+5. 환경 : ubuntu-latest
+steps
+6. 레포지토리 코드 체크아웃
+7. nodejs환경 사용하기
+ㄴ with:
+      node-version: '18'
+8. 의존성 설치하기
+9. 프로젝트 빌드
+
+- name: Move build folder into react-eb-final
+  run: mv build react-eb-final/
+
+- name: Zip react-eb-final folder
+  run: zip -r react-eb-final.zip react-eb-final
